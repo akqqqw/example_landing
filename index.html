@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Студия аппаратного маникюра и педикюра Nailed It</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=af326049-6a46-4bf5-ba49-80588f6ffd5e&lang=ru_RU"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Nailed It</a>
+      <a href="tel:+78001234567" class="phone">+7 (800) 123-45-67</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__content">
+      <h1>Аппаратный маникюр и педикюр в Саратове</h1>
+      <p>Безопасная обработка фрезой, стойкое покрытие и аккуратный дизайн. Запишитесь онлайн и приходите на готовое.</p>
+      <a href="#booking" class="btn">Записаться онлайн</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Наши услуги</h2>
+      <div class="services__grid">
+        <article class="service-card">
+          <h3>Аппаратный маникюр</h3>
+          <p>Мягкое удаление кутикулы и обработка ногтевой пластины фрезой. Подходит для сухой и чувствительной кожи.</p>
+          <span class="price">от 1 200 ₽</span>
+        </article>
+        <article class="service-card">
+          <h3>Аппаратный педикюр</h3>
+          <p>Комплексный уход за стопами: удаление мозолей, натоптышей, обработка ногтей и кутикулы.</p>
+          <span class="price">от 1 800 ₽</span>
+        </article>
+        <article class="service-card">
+          <h3>Маникюр + покрытие</h3>
+          <p>Аппаратный маникюр с нанесением гель-лака. Большой выбор цветов и финишей.</p>
+          <span class="price">от 2 000 ₽</span>
+        </article>
+        <article class="service-card">
+          <h3>Наращивание ногтей</h3>
+          <p>Укрепление натуральных ногтей или наращивание длины под покрытие.</p>
+          <span class="price">от 2 500 ₽</span>
+        </article>
+        <article class="service-card">
+          <h3>Дизайн и nail art</h3>
+          <p>Стразы, френч, лунный, втирка, стемпинг и любые другие пожелания по эскизу.</p>
+          <span class="price">от 300 ₽</span>
+        </article>
+        <article class="service-card">
+          <h3>Восстановление и уход</h3>
+          <p>SPA для рук и ног, питательные маски, восстановление повреждённых ногтей.</p>
+          <span class="price">от 1 000 ₽</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2>Примеры работ</h2>
+      <div class="portfolio__grid">
+        <figure class="portfolio__item">
+          <img src="images/tp1.jpg" alt="Аппаратный маникюр">
+          <figcaption>Аппаратный маникюр</figcaption>
+        </figure>
+        <figure class="portfolio__item">
+          <img src="images/tp2.jpg" alt="Аппаратный педикюр">
+          <figcaption>Аппаратный педикюр</figcaption>
+        </figure>
+        <figure class="portfolio__item">
+          <img src="images/tp3.jpg" alt="Дизайн ногтей">
+          <figcaption>Дизайн ногтей</figcaption>
+        </figure>
+        <figure class="portfolio__item">
+          <img src="images/tp4.jpg" alt="Уход за ногтями">
+          <figcaption>Восстановление и уход</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="locations" id="locations">
+    <div class="container">
+      <h2>Мы в Саратове</h2>
+      <div class="locations__grid">
+        <div class="locations__info">
+          <ul class="locations__list">
+            <li>
+              <strong>Студия на Радищева</strong>
+              <span>ул. Радищева, 10</span>
+              <span>Ежедневно 09:00–21:00</span>
+            </li>
+            <li>
+              <strong>Студия на Большой Казачьей</strong>
+              <span>ул. Большая Казачья, 47</span>
+              <span>Ежедневно 10:00–22:00</span>
+            </li>
+          </ul>
+          <p class="locations__phone">Запись по телефону: <a href="tel:+78001234567">+7 (800) 123-45-67</a></p>
+        </div>
+        <div id="map" class="locations__map"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="container booking__inner">
+      <div class="booking__info">
+        <h2>Запишитесь на процедуру</h2>
+        <p>Оставьте заявку, и мы перезвоним, чтобы подобрать удобное время и мастера.</p>
+        <p class="booking__phone">
+          Или позвоните: <a href="tel:+78001234567">+7 (800) 123-45-67</a>
+        </p>
+      </div>
+      <form class="form" id="bookingForm" novalidate>
+        <label class="form__field">
+          <span>Ваше имя</span>
+          <input type="text" name="name" placeholder="Екатерина" required>
+        </label>
+        <label class="form__field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+        </label>
+        <label class="form__field">
+          <span>Услуга</span>
+          <select name="service" required>
+            <option value="" disabled selected>Выберите услугу</option>
+            <option value="manicure">Аппаратный маникюр</option>
+            <option value="pedicure">Аппаратный педикюр</option>
+            <option value="combo">Маникюр + покрытие</option>
+            <option value="extension">Наращивание ногтей</option>
+            <option value="design">Дизайн и nail art</option>
+            <option value="care">Восстановление и уход</option>
+          </select>
+        </label>
+        <button type="submit" class="btn btn--full">Отправить заявку</button>
+        <p class="form__note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+        <p class="form__success" id="formSuccess" role="status">Спасибо! Мы скоро свяжемся с вами.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Студия Nailed It. Все права защищены.</p>
+      <address>г. Саратов, ул. Радищева, 10 и ул. Большая Казачья, 47</address>
+    </div>
+  </footer>
+
+  <script>
+    ymaps.ready(init);
+
+    function init() {
+      const map = new ymaps.Map('map', {
+        center: [51.5365, 46.0410],
+        zoom: 13,
+        controls: ['zoomControl']
+      });
+
+      const locations = [
+        { coords: [51.524507, 46.031876], title: 'Студия на Радищева', text: 'ул. Радищева, 10' },
+        { coords: [51.534363, 46.022704], title: 'Студия на Большой Казачьей', text: 'ул. Большая Казачья, 47' }
+      ];
+
+      locations.forEach(function (loc) {
+        const placemark = new ymaps.Placemark(loc.coords, {
+          balloonContent: `<b>${loc.title}</b><br>${loc.text}`
+        });
+        map.geoObjects.add(placemark);
+      });
+
+      map.setBounds(map.geoObjects.getBounds(), { checkZoomRange: true, zoomMargin: 30 });
+    }
+  </script>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const success = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      success.classList.add('is-visible');
+      form.reset();
+      setTimeout(() => success.classList.remove('is-visible'), 5000);
+    });
+  </script>
+</body>
+</html>
